@@ -16,7 +16,7 @@ from langchain.schema import (
     SystemMessage
 )
 from wikimapper import WikiMapper
-import wptools
+# import wptools
 import wikipedia
 
 from wikidata.label_desc_from_qids import query_label_and_descriptions
@@ -120,10 +120,10 @@ def get_candidate_wikidata_entities(term):
     return final_results, wikidata_ids
 
 
-def get_page(qid):
-    page = wptools.page(wikibase=qid, silent=True)  # can search different wikimedia databases
-    page = page.get_wikidata(show=False)  # can set up local version to make it faster
-    return page
+# def get_page(qid):
+#     page = wptools.page(wikibase=qid, silent=True)  # can search different wikimedia databases
+#     page = page.get_wikidata(show=False)  # can set up local version to make it faster
+#     return page
 
 
 def get_all_candidate_qids(entities):
